@@ -7,7 +7,6 @@ export default async function OrdersPage() {
 
   return (
     <main className="max-w-6xl mx-auto px-6 py-12">
-      {/* Tiêu đề + nút */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-10 gap-4">
         <div className="flex items-center gap-3">
           <div className="p-2 bg-blue-50 rounded-lg">
@@ -24,14 +23,13 @@ export default async function OrdersPage() {
         </div>
         <Link
           href="/orders/new"
-          className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-3 text-white hover:bg-blue-700 transition-all duration-200 shadow-sm hover:shadow-md"
+          className="inline-flex items-center gap-2 rounded-lg bg-black px-5 py-3 text-white hover:bg-gray-800 transition-all duration-200 shadow-sm hover:shadow-md"
         >
           <PlusCircle className="h-5 w-5" />
           Tạo đơn mới
         </Link>
       </div>
 
-      {/* Danh sách đơn hàng */}
       {orders.length === 0 ? (
         <div className="text-center py-20 bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl border border-gray-200">
           <div className="w-20 h-20 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
@@ -45,7 +43,7 @@ export default async function OrdersPage() {
           </p>
           <Link
             href="/orders/new"
-            className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 text-white hover:bg-blue-700 transition-all duration-200 shadow-sm hover:shadow-md"
+            className="inline-flex items-center gap-2 rounded-lg bg-black px-6 py-3 text-white hover:bg-gray-800 transition-all duration-200 shadow-sm hover:shadow-md"
           >
             <PlusCircle className="h-5 w-5" />
             Tạo đơn đầu tiên
@@ -89,7 +87,7 @@ export default async function OrdersPage() {
               <div className="mt-6 pt-4 border-t border-gray-100">
                 <Link
                   href={`/orders/${o.id}`}
-                  className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors duration-200 group/link"
+                  className="inline-flex items-center gap-1 text-sm font-medium text-black hover:text-gray-700 transition-colors duration-200 group/link"
                 >
                   Xem chi tiết
                   <svg 

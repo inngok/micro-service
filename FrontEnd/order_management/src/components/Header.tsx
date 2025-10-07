@@ -6,10 +6,9 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const NAV = [
-   { href: "/", label: "Trang chủ" },
+  { href: "/", label: "Trang chủ" },
   { href: "/users", label: "Người dùng" },
   { href: "/orders", label: "Đơn hàng" },
- 
 ];
 
 export default function Header() {
@@ -20,13 +19,12 @@ export default function Header() {
     pathname === href || pathname.startsWith(href + "/");
 
   const linkCls = (href: string) =>
-    `transition ${isActive(href) ? "text-red-600" : "hover:text-red-600"}`;
+    `transition ${isActive(href) ? "text-black font-semibold" : "hover:text-black"}`;
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/90 backdrop-blur">
       <nav className="mx-auto max-w-7xl px-4 md:px-6 h-16 flex items-center justify-between">
-
-        <Link href="/" className="flex items-center gap-3 shrink-0" aria-label="Trang chủ">
+        <Link href="/" className="flex items-center gap-3 shrink-0">
           <Image
             src="/images/logo_1.png"
             alt="Logo"
@@ -44,9 +42,8 @@ export default function Header() {
             </Link>
           ))}
         </div>
+
         <button
-          aria-label="Mở menu"
-          aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
           className="md:hidden inline-flex items-center justify-center rounded-md p-2 border"
         >
@@ -56,7 +53,6 @@ export default function Header() {
         </button>
       </nav>
 
-      {/* Mobile menu */}
       {open && (
         <div className="md:hidden border-t bg-white">
           <div className="mx-auto max-w-7xl px-4 py-3">

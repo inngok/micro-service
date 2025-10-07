@@ -108,7 +108,7 @@ export default function NewOrderPage() {
 
             <button
               type="submit"
-              className="w-full py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all duration-200 shadow-sm hover:shadow-md font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-all duration-200 shadow-sm hover:shadow-md font-medium disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={userId === "" || price === "" || !product.trim()}
             >
               Tạo đơn hàng
