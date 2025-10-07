@@ -1,4 +1,3 @@
-# src/main/resources/application.yml
 server:
   port: 8082
 
@@ -9,7 +8,7 @@ spring:
     url: jdbc:h2:mem:orderdb
     driverClassName: org.h2.Driver
     username: sa
-    password:
+    password: ""
   h2:
     console:
       enabled: true
@@ -17,6 +16,13 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  redis:
+    host: localhost
+    port: 6379
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: order-service-group
 
 eureka:
   client:
